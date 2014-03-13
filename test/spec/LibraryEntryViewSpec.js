@@ -5,7 +5,7 @@ describe('LibraryEntryView', function() {
     model = new SongModel({
       artist: 'Fakey McFakerson',
       title: 'Never Gonna Mock You Up',
-      url: 'example/url',
+      url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3',
     });
     sinon.spy(SongModel.prototype, 'enqueue'); // Uncomment this when working on the second test
     sinon.spy(SongModel.prototype, 'play');

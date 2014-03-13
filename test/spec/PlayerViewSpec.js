@@ -5,12 +5,12 @@ describe('PlayerView', function() {
 
     library = new Songs([
       {
-        url: "mp3s/08 4 Page Letter.mp3",
+        url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
         title: "4 Page Letter",
         artist: "Aaliyah"
       },
       {
-        url: "mp3s/11 We Need A Resolution.mp3",
+        url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/05+Hot+Like+Fire.mp3",
         title: "We Need A Resolution",
         artist: "Aaliyah"
       }
@@ -27,7 +27,7 @@ describe('PlayerView', function() {
   });
 
   describe('Song transitions', function() {
-    xit('dequeues a song when finished playing & plays the next song', function(){
+    it('dequeues a song when finished playing & plays the next song', function(){
       library.at(0).play();
       var originalSong = appView.playerView.model;
       appView.model.get('songQueue').add(library.at(1));

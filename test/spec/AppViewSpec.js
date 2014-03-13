@@ -7,12 +7,12 @@ describe('AppView', function() {
         {
           artist: 'Fakey McFakerson',
           title: 'Never Gonna Mock You Up',
-          url: 'example/url'
+          url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3'
         },
         {
           artist: 'BittyBacon',
           title: 'Sizzle Sundays',
-          url: 'fake/url'
+          url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3'
         }
       ])
     });
@@ -24,7 +24,7 @@ describe('AppView', function() {
   });
 
   describe('when the currently playing song changes', function() {
-    xit('updates current song in playerView', function(){
+    it('updates current song in playerView', function(){
       var song = app.get('library').at(0);
       expect(appView.playerView.model).to.not.equal(song);
       song.play();
