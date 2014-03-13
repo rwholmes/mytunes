@@ -8,6 +8,11 @@ var AppView = Backbone.View.extend({
 
     this.model.on('change:currentSong', function(model){
       this.playerView.setSong(model.get('currentSong'));
+      var artist = model.get('currentSong').get('artist');
+      var songName = model.get('currentSong').get('title');
+      $('.current-song').remove();
+      $('audio').before('<div class="current-song"><span style="font-weight:bold">' + artist + '</span>' + ' - ' + songName +'</div>');
+
     }, this);
 
     var that = this.model;
