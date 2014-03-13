@@ -12,12 +12,14 @@ var AppView = Backbone.View.extend({
 
     var that = this.model;
     this.playerView.$el.on('ended', function() {
-        console.log('song ended');
-        console.log(that);
-        console.log(that.get('songQueue'));
-        console.log(that.get('songQueue').at(0));
-        that.get('songQueue').at(0).dequeue();
-        console.log(that.get('songQueue'));
+        if (that.get('songQueue').length) {
+          console.log('Current song before change');
+          console.log(that.get('songQueue').at(0));
+          that.get('songQueue').at(0).dequeue();
+          that.set('currentSong', that.get('songQueue').at(that.get('songQueue').length-1));
+          console.log('Current song after change');
+          console.log(that.get('songQueue').at(that.get('songQueue').length-1));
+        }
     });
   },
 
@@ -30,3 +32,9 @@ var AppView = Backbone.View.extend({
   }
 
 });
+
+
+// FOR TOMORROW!!!!!!
+// 1. Display current song that's playing
+// 2. Check that queue and current song are updated correctly after a song finishes playing
+// note: we may have put in the wrong indexes in the console logs above
