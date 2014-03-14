@@ -5,7 +5,8 @@ describe('SongModel', function() {
     model = new SongModel({
       artist: 'data',
       url: '/test/testsong.mp3',
-      title:'test song'
+      title:'test song',
+      playcount: 0
     });
     sinon.spy(model, 'trigger');
   });
@@ -31,7 +32,7 @@ describe('SongModel', function() {
     });
   });
 
-  xdescribe('ended', function() {
+  describe('ended', function() {
     it('triggers an "ended" event', function() {
       model.play();
       model.ended();

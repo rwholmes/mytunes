@@ -36,6 +36,3 @@ var AppView = Backbone.View.extend({
 });
 
 
-// FOR TOMORROW!!!!!!
-// 2. Check that queue and current song are updated correctly after a song finishes playing
-// note: we may have put in the wrong indexes in the console logs above

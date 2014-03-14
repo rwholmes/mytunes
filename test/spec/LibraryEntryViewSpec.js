@@ -6,6 +6,7 @@ describe('LibraryEntryView', function() {
       artist: 'Fakey McFakerson',
       title: 'Never Gonna Mock You Up',
       url: 'https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3',
+      playcount: 0
     });
     sinon.spy(SongModel.prototype, 'enqueue'); // Uncomment this when working on the second test
     sinon.spy(SongModel.prototype, 'play');

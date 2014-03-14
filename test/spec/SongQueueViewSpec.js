@@ -6,12 +6,14 @@ describe('SongQueueView', function() {
       {
         artist: 'data',
         url: '/test/testsong.mp3',
-        title:'test song'
+        title:'test song',
+        playcount: 0
       },
       {
         artist: 'data',
         url: '/test/testsong2.mp3',
-        title:'test song 2'
+        title:'test song 2',
+        playcount: 0
       }
     ]);
   });

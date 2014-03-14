@@ -7,12 +7,14 @@ describe('PlayerView', function() {
       {
         url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
         title: "4 Page Letter",
-        artist: "Aaliyah"
+        artist: "Aaliyah",
+        playcount: 0
       },
       {
         url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/05+Hot+Like+Fire.mp3",
         title: "We Need A Resolution",
-        artist: "Aaliyah"
+        artist: "Aaliyah",
+        playcount: 0
       }
     ]);
     // playerView is created in AppView initialize
